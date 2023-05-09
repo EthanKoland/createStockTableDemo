@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    script(src="javascripts/addItem.js" defer)
+    form#itemFilter()
+        label(for='itemFilterSelector') Select Item
+        select#itemFilterSelector
+
+        input#ascendingOrder(type='radio' name = 'order' placeholder='ascending Order')
+        label(for='ascendingOrder') Ascending Order
+        input#descendingOrder(type='radio' name = 'order' placeholder='Descending Order')
+        label(for='descendingOrder') Descending Order
+        
+
+        button#loadItem(type='button' onclick="filterItems()") Load Item
+    table#itemTable
+        tr#itemRowTitle
+            th id
+            th Item 
+            th Category
+            th Quantity 
+            th Price
+            th Age Requirement
+        tr.itemRow
+            th cookie
+            th 1
+            th notEnough
+        
